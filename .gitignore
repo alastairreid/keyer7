@@ -1,0 +1,8 @@
+*.swp
+*.un~
+*.o
+*.a
+*.elf
+*.hex
+*.map
+*.zip
