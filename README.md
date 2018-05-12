@@ -20,6 +20,24 @@ Install the tool and Adafruit library as follows
     git submodule init
     git submodule update
 
+    pushd Adafruit_nRF52_Arduino/tools/nrfutil-0.5.2
+    # to install the packages, you might need to disable virtualenv
+    # (or you might want to select an appropriate virtualenv)
+    export PIP_REQUIRE_VIRTUALENV=false
+
+    pip install --user -r requirements.txt
+    python setup.py install
+    popd
+
+    # download and install driver for CP2104 USB-to-Serial (the chip on the NRF52 board)
+    wget https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
+    unzip Mac_OSX_VCP_Driver.zip
+    open SiLabsUSBDriverDisk.dmg
+    # install the driver
+    # confirm install (if NRF board is connected over USB at the moment)
+    ls /dev/*USB*
+    # Should show: /dev/cu.SLAB_USBtoUART /dev/tty.SLAB_USBtoUART
+
 Build the Adafruit library as follows.
 This will generate a lot of warning messages --- hold your nose and ignore them.
 
