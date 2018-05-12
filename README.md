@@ -115,3 +115,28 @@ The keymap is based on the ["modified NASA" keymap](https://chorder.cs.vassar.ed
 | ---- | N-F   | brk  |         |
 | ---- | NCF   | rst  |         |
 
+## Building
+
+Install the tool and Adafruit library as follows
+
+    wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2
+    tar jxf gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2
+
+    git submodule init
+    git submodule update
+
+Build the Adafruit library as follows.
+This will generate a lot of warning messages --- hold your nose and ignore them.
+
+    make nrf52_cores.a
+
+Build as follows
+
+    make main.elf
+
+Upload as follows
+
+    make upload
+
+You should be able to pair your phone or laptop with the keyer.
+Open up an editor and try typing some sentences.

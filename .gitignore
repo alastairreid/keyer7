@@ -6,3 +6,7 @@
 *.hex
 *.map
 *.zip
+
+gcc-arm-none-eabi-7-2017-q4-major
+gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2
+Adafruit_nRF52_Arduino

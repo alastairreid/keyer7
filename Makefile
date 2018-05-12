@@ -1,18 +1,18 @@
 # Change the following to point to your install locations
-ARDUINO  = $(HOME)/Programming/keyboards/Arduino_1.8.3.app
-NRF52    = $(HOME)/Documents/Arduino/hardware/Adafruit/Adafruit_nRF52_Arduino
-TOOLS    = $(HOME)/Library/Arduino15/packages/adafruit/tools
+# The following settings assume a local install based on the
+# instructions in README.md
+BINUTILS = gcc-arm-none-eabi-7-2017-q4-major
+NRF52    = Adafruit_nRF52_Arduino
 
 # Control whether commands are shown
 # use "make QUIET=" to enable display of commands
 QUIET = @
 
-BINUTILS = $(TOOLS)/gcc-arm-none-eabi/5_2-2015q4/
 CXX      = $(BINUTILS)/bin/arm-none-eabi-g++
 CC       = $(BINUTILS)/bin/arm-none-eabi-gcc
 AR       = $(BINUTILS)/bin/arm-none-eabi-ar
 OBJCOPY  = $(BINUTILS)/bin/arm-none-eabi-objcopy
-LIBGCC   = $(BINUTILS)/lib/gcc/arm-none-eabi/5.2.1/libgcc.a
+LIBGCC   = $(BINUTILS)/lib/gcc/arm-none-eabi/7.2.1/libgcc.a
 
 NRFUTIL  = /usr/local/bin/nrfutil
 
@@ -107,7 +107,6 @@ INCLUDES += -I$(NRF52)/libraries/SPI
 INCLUDES += -I$(NRF52)/libraries/Bluefruit52Lib/src
 INCLUDES += -I$(NRF52)/libraries/BLEHomekit/src
 INCLUDES += -I$(NRF52)/variants/feather52
-INCLUDES += -I$(ARDUINO)/Contents/Java/libraries/Keyboard/src
 INCLUDES += -I$(NRF52)/libraries/SoftwareSerial
 
 ERRFLAGS += -Wall
