@@ -429,11 +429,11 @@ void initBluetooth() {
     Bluefruit.begin();
     // Set max power. Accepted values are: -40, -30, -20, -16, -12, -8, -4, 0, 4
     Bluefruit.setTxPower(4);
-    Bluefruit.setName("Bluefruit52");
+    Bluefruit.setName("Keyer7");
 
     // Configure and Start Device Information Service
-    bledis.setManufacturer("Adafruit Industries");
-    bledis.setModel("Bluefruit Feather 52");
+    bledis.setManufacturer("Haggis Industries");
+    bledis.setModel("Haggis Septambic Keyer");
     bledis.begin();
 
     /* Start BLE HID
