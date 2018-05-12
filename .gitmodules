@@ -1,0 +1,3 @@
+[submodule "Adafruit_nRF52_Arduino"]
+	path = Adafruit_nRF52_Arduino
+	url = git@github.com:adafruit/Adafruit_nRF52_Arduino.git
